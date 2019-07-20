@@ -1,0 +1,24 @@
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Bitter', serif;
+    background-image: url("../img/beautiful-weather.jpg");
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+}
+
+#super-container {
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+
+#head-container {
+    background-color: lavender;
+    padding-left: 10px;
+}
+
+div.city {
+    padding: 10px;
+}
+
+

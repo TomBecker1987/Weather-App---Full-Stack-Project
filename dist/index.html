@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="super-container">
+        <div id="head-container">
+            <input id="city-input" type="text" placeholder="Please enter a city's name">
+            <button type="button" id="search-button">Search</button>
+        </div>
+        <div id="main-container"></div>
+    </div>
+    <!-- handlebars -->
+        <script id="main-template" type="text/x-handlebars-template">
+            {{#each city}}
+                <div class="city">
+                    <button type="button" class="save-button">+</button>
+                    <button type="button" class="remove-button">-</button>
+                    <div class="city-name">{{name}}</div>
+                    <div class="city-temperature">{{temperature}}</div>
+                    <div class="condition">{{condition}}</div>
+                    <div class="date-updated">{{updatedAt}}</div>
+                    <img src="{{conditionPic}}" alt="weather-picture" class="condition-pic">
+                </div>
+            {{/each}}
+        </script>
+    <!-- handlebars -->
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
